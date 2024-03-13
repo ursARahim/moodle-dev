@@ -12,7 +12,8 @@ services:
     volumes:
       - moodle_data:/var/lib/mysql
   moodle:
-    build: .
+    build:
+      context: .
     restart: unless-stopped
     ports:
       - 8080:80
